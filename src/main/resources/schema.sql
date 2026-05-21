@@ -1,11 +1,14 @@
 DROP TABLE IF EXISTS `task`;
 CREATE TABLE `task`  (
-  `task_id` int NOT NULL AUTO_INCREMENT,
-  `task_name` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_0900_ai_ci NULL DEFAULT NULL,
-  `status` varchar(30) CHARACTER SET utf8mb4 COLLATE utf8mb4_0900_ai_ci NULL DEFAULT NULL,
-  `user_id` int NOT NULL,
-  PRIMARY KEY (`task_id`) USING BTREE
-) ENGINE = InnoDB CHARACTER SET = utf8mb4 COLLATE = utf8mb4_0900_ai_ci ROW_FORMAT = Dynamic;
+                         `task_id` int NOT NULL AUTO_INCREMENT,
+                         `task_name` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_0900_ai_ci NULL DEFAULT NULL,
+                         `status` int NOT NULL,
+                         `user_id` int NOT NULL,
+                         `description` text CHARACTER SET utf8mb4 COLLATE utf8mb4_0900_ai_ci NULL,
+                         PRIMARY KEY (`task_id`) USING BTREE
+) ENGINE = InnoDB AUTO_INCREMENT = 4 CHARACTER SET = utf8mb4 COLLATE = utf8mb4_0900_ai_ci ROW_FORMAT = Dynamic;
+
+SET FOREIGN_KEY_CHECKS = 1;
 
 SET FOREIGN_KEY_CHECKS = 1;
 

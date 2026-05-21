@@ -13,7 +13,7 @@ public class TaskServiceImply implements TaskService {
     private TaskMapper taskMapper;
 
     @Override
-    public Result getAllTasks() {
+    public Result<Object> getAllTasks() {
         try {
             return Result.success(taskMapper.findAllTasks());
         } catch (Exception e) {
@@ -22,7 +22,7 @@ public class TaskServiceImply implements TaskService {
     }
 
     @Override
-    public Result getTasksByUserId(Integer userId) {
+    public Result<Object> getTasksByUserId(Integer userId) {
         try {
             return Result.success(taskMapper.findTasksByUserId(userId));
         } catch (Exception e) {
@@ -31,11 +31,21 @@ public class TaskServiceImply implements TaskService {
     }
 
     @Override
-    public Result getTasksByStatus(Integer status) {
+    public Result<Object> getTasksByStatus(Integer status) {
         try {
             return Result.success(taskMapper.findTasksByStatus(status));
         } catch (Exception e) {
             return Result.error("获取状态任务列表失败: " + e.getMessage());
+        }
+    }
+
+    @Override
+    public Result<String> getTaskDetailById(Integer taskId) {
+        try {
+            String description = taskMapper.findTaskDetailById(taskId);
+            return Result.success(description);
+        } catch (Exception e) {
+            return Result.error("获取任务详情失败: " + e.getMessage());
         }
     }
 

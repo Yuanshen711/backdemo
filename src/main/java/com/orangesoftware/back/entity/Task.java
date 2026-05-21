@@ -8,4 +8,5 @@ public class Task {
     private String taskName;
     private Integer status;
     private Integer userId;
+    private String description;
 }

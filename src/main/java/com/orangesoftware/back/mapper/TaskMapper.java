@@ -37,4 +37,8 @@ public interface TaskMapper {
     })
     @Select("SELECT * FROM task WHERE status = #{status}")
     List<Task> findTasksByStatus(Integer status);
+
+
+    @Select("SELECT description FROM task WHERE task_id = #{taskId}")
+    String findTaskDetailById(Integer taskId);
 }

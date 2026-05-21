@@ -4,9 +4,11 @@ import com.orangesoftware.back.entity.Result;
 
 public interface TaskService {
     
-    Result getAllTasks();
+    Result<Object> getAllTasks();
     
-    Result getTasksByUserId(Integer userId);
+    Result<Object> getTasksByUserId(Integer userId);
     
-    Result getTasksByStatus(Integer status);
+    Result<Object> getTasksByStatus(Integer status);
+
+    Result<String> getTaskDetailById(Integer taskId);
 }
