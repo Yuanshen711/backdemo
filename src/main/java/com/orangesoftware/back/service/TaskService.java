@@ -11,4 +11,7 @@ public interface TaskService {
     Result<Object> getTasksByStatus(Integer status);
 
     Result<String> getTaskDetailById(Integer taskId);
+
+
+
 }
