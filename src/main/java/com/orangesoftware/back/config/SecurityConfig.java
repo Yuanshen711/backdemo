@@ -22,7 +22,7 @@ public class SecurityConfig {
     public SecurityFilterChain filterChain(HttpSecurity http) {
         http.csrf(csrf -> csrf.disable())
                 .authorizeHttpRequests(auth -> auth
-                .requestMatchers("/api/login", "/api/register", "/", "/error", "/api/public/**", "/api/tasks", "/api/task/**").permitAll()
+                .requestMatchers("/api/login", "/api/register", "/", "/error", "/api/public/**", "/api/tasks", "/api/task/**", "/api/submits", "/api/submit/**").permitAll()
                 .anyRequest().authenticated())
                 .sessionManagement(session -> session.sessionCreationPolicy(SessionCreationPolicy.STATELESS));
         return http.build();

@@ -1,4 +1,4 @@
-package com.orangesoftware.back;
+package com.orangesoftware.back.config;
 
 import com.orangesoftware.back.service.JwtInterceptor;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -16,6 +16,6 @@ public class WebConfig implements WebMvcConfigurer {
     public void addInterceptors(InterceptorRegistry registry) {
         registry.addInterceptor(jwtInterceptor)
                 .addPathPatterns("/api/**")
-                .excludePathPatterns("/api/login", "/api/register", "/api/tasks", "/api/task/**");
+                .excludePathPatterns("/api/login", "/api/register", "/api/tasks", "/api/task/**", "/api/submits", "/api/submit/**");
     }
 }

@@ -12,11 +12,24 @@ spring:
       port: 6379
       host: 127.0.0.1
       database: 0
-
+  rabbitmq:
+    host: 127.0.0.1
+    port: 5672
+    username: guest
+    password: guest
+    virtual-host: /
 
 mybatis:
   configuration:
     map-underscore-to-camel-case: true
+
+# 异步线程池配置
+async:
+  executor:
+    core-pool-size: 5
+    max-pool-size: 20
+    queue-capacity: 100
+    thread-name-prefix: async-task-
 
 
 
