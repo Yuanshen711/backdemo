@@ -1,5 +1,6 @@
-package com.orangesoftware.back.service;
+package com.orangesoftware.back.config;
 
+import com.orangesoftware.back.utill.JwtUtil;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
 import org.springframework.web.servlet.HandlerInterceptor;

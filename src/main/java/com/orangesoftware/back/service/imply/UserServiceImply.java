@@ -4,7 +4,7 @@ import com.orangesoftware.back.DTO.LoginDTO;
 import com.orangesoftware.back.entity.Result;
 import com.orangesoftware.back.entity.User;
 import com.orangesoftware.back.mapper.UserMapper;
-import com.orangesoftware.back.service.JwtUtil;
+import com.orangesoftware.back.utill.JwtUtil;
 import com.orangesoftware.back.service.UserService;
 import jakarta.annotation.Resource;
 import org.springframework.beans.factory.annotation.Autowired;
